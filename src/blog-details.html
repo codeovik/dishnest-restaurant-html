@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>Blog details | DishNest - Restaurant Website HTML Template</title>
+
+    <!-- tags -->
+    <meta name="description" content="DishNest – A modern and responsive restaurant theme. Easily create a professional website with menu, reservations, blog, and contact sections.">
+    <meta name="keywords" content="restaurant website, restaurant template, cafe, coffe shop">
+    <meta name="author" content="CodeOVIK">
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
+
+    <!-- swiperjs for customers review -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!-- odometer for count up animation -->
+    <link rel="stylesheet" href="./assets/css/odometer-theme-default.min.css">
+    <!-- fontasome -->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <!-- main stylesheet(tailwind css) -->
+    <link rel="stylesheet" href="./assets/css/output.css">
+
+  </head>
+  <body class="dark:bg-[#050505] selection:bg-primary dark:text-white overflow-x-hidden">
+
+    <!-- Go To Top Button -->
+    <button id="goTopBtn" class="singlePageLink fixed z-50 cursor-pointer hover:scale-90 transition-all flex items-end bg-white/50 dark:bg-black/50 h-60 aspect-square bottom-30 right-30 rounded-full overflow-hidden gotop opacity-0 translate-y-10 pointer-events-none">
+      <span id="scrollProgress" class="bg-primary w-full" style="height:0%"></span>
+      <svg class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 fill-black dark:fill-white transition-all" xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 -960 960 960"><path d="M440-80v-647L256-544l-56-56 280-280 280 280-56 57-184-184v647h-80Z"/></svg>
+    </button>
+
+    <!-- Cursor follower -->
+    <div id="cursor" class="h-20 z-11 justify-center items-center aspect-square bg-primary/50 rounded-full hidden top-0 left-0 fixed pointer-events-none"></div>
+
+    <!-- background cursor follower -->
+    <div id="BackgroundCursor" class="h-600 aspect-square -z-1 blur-[80px] rounded-[40%] top-0 left-0 fixed pointer-events-none dark:bg-primary/20 bg-primary/40"></div>
+
+    <!-- Navbar start -->
+    <nav class="px-40 py-15 z-10 flex justify-between w-full items-center absolute top-0 left-0">
+      <!-- logo -->
+      <a href="./index.html" class="">
+        <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-40 hidden dark:block">
+        <img src="./assets/images/logo-light.png" alt="light logo" class="h-40 dark:hidden">
+      </a>
+      <!-- Menubar in up to 1024px width devices -->
+      <div class="gap-30 items-center hidden lg:flex">
+        <ul class="flex gap-20">
+          <li>
+            <a href="./index.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
+          </li>
+          <li>
+            <a href="./menu.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Menu</a>
+          </li>
+          <li>
+            <a href="./blog.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Blog</a>
+          </li>
+          <li>
+            <a href="./about.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">About Us</a>
+          </li>
+          <li>
+            <a href="./gallery.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Gallery</a>
+          </li>
+          <li>
+            <a href="./book-a-table.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Book table</a>
+          </li>
+        </ul>
+        <!-- dark and light svg -->
+        <button id="darkToggle" class="aspect-square rounded-full cursor-pointer bg-black/30 p-10">
+          <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/>
+          </svg>
+          <svg class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Menubar in less than 1024px width devices -->
+      <!-- menu open button -->
+      <button id="openMenu" class="lg:hidden bg-primary h-40 aspect-square relative rounded-full">
+        <span class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
+        <span class="absolute top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
+        <span class="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
+      </button>
+      <!-- menu container. It will opacity:50% when click to menu -->
+      <div id="menuBg" class="fixed top-0 left-0 h-dvh w-full z-11 bg-black/80 pointer-events-none opacity-0 transition-all"></div>
+      <!-- menu content -->
+      <div id="menuContainer" class="bg-dark p-20 text-2xl z-12 h-dvh max-[300px]:w-[90%] w-300 top-0 -left-full fixed overflow-y-auto">
+        <div class="flex justify-between items-center">
+          <!-- logo in menu container -->
+          <a href="./index.html" class="">
+            <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-20 hidden dark:block">
+            <img src="./assets/images/logo-light.png" alt="light logo" class="h-20 dark:hidden">
+          </a>
+          <!-- close menu -->
+          <button id="closeMenuFromButton" class="bg-primary rounded-full h-40 aspect-square flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </button>
+        </div>
+        <!-- menu links -->
+        <ul class="mt-20 flex flex-col">
+          <li>
+            <a href="./index.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
+          </li>
+          <li>
+            <a href="./menu.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Menu</a>
+          </li>
+          <li>
+            <a href="./blog.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Blog</a>
+          </li>
+          <li>
+            <a href="./about.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">About Us</a>
+          </li>
+          <li>
+            <a href="./gallery.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Gallery</a>
+          </li>
+          <li>
+            <a href="./book-a-table.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Book table</a>
+          </li>
+        </ul>
+        <!-- contact info -->
+        <p class="text-2xl mt-20 mb-10">Contact Info:</p>
+        <p class="flex gap-5 text-sm mb-10 items-center">
+          <svg class="h-30 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg>
+          <span>Main Street, Melbourne, Australia</span>
+        </p>
+        <p class="flex gap-5 text-sm mb-10 items-center">
+          <svg class="h-30 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z"/></svg>
+          <span>+ (123) 456-789</span>
+        </p>
+        <p class="flex gap-5 text-sm mb-10 items-center">
+          <svg class="h-30 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
+          <span>info@domainname.com</span>
+        </p>
+        <p class="flex gap-5 text-sm mb-10 items-center">
+          <svg class="h-30 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/></svg>
+          <span>Saturday - Sunday 09:00 AM - 11:00 PM</span>
+        </p>
+      </div>
+      <!-- menu close when click to background -->
+      <div id="closeMenuFromBackground" class="fixed top-0 right-0 w-full h-dvh pointer-events-none"></div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero section start -->
+    <header class="relative w-full h-350 before:absolute before:inset-0 bg-white dark:bg-black before:bg-[url('../images/sub-page-header-blog-details.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-30">
+      <div class="text-white flex flex-col gap-20 items-center justify-center h-full relative">
+        <h1 class="text-5xl font-bold text-black dark:text-white">Our Blog</h1>
+        <p class="flex items-center text-lg text-black dark:text-white">
+          <a href="./index.html" class="text-primary">Home</a>
+          <svg class="h-12 fill-black dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+          <a href="./blog.html" class="text-primary">Blog</a>
+          <svg class="h-12 fill-black dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+          <a href="">Blog Details</a>
+        </p>
+      </div>
+    </header>
+    <!-- Hero section end -->
+
+    <!-- blog grid start -->
+    <main class="px-20 lg:px-40 max-w-1400 mx-auto mt-50">
+      <!-- blog image -->
+      <img src="./assets/images/blog-cake.png" alt="cake" class="w-full aspect-square md:aspect-4/3 lg:aspect-5/2 rounded-3xl object-cover">
+
+      <!-- blog title -->
+      <h2 class="md:text-5xl text-2xl font-bold text-center mt-20 mg:mt-40">
+        The Art of Baking the Perfect Chocolate Cake
+      </h2>
+
+      <div id="blog-details" class="bg-light dark:bg-dark rounded-2xl md:rounded-3xl p-20 mt-20">
+          <!-- blog text start -->
+          <h3>Perfect Chocolate Cake: From Batter to Bliss</h3>
+          <p>A chocolate cake is more than just a dessert—it’s a timeless classic that has the power to turn any ordinary day into a celebration. The perfect cake balances moist texture with rich chocolate flavor, creating an irresistible combination that appeals to both kids and adults. While many people believe baking a great cake requires professional skills, the truth is that with the right ingredients, accurate measurements, and a little patience, anyone can achieve bakery-quality results at home. This recipe is designed to guide you through each step, ensuring that every slice is as soft, fluffy, and decadent as it should be.</p>
+
+          <h3>Why This Recipe Works</h3>
+          <p>Every detail in this recipe has been carefully tested to guarantee success. The balance of oil and butter ensures the cake remains moist without being too heavy, while the use of hot water with cocoa powder enhances the chocolate flavor, making it deeper and more intense. The addition of eggs brings structure and lightness, and sugar provides not only sweetness but also contributes to the cake’s tender crumb. Finally, the finishing touch of silky ganache or creamy frosting elevates the entire experience, making it look as beautiful as it tastes.</p>
+          <ul>
+            <li>Oil and butter keep the cake soft and tender.</li>
+            <li>Cocoa powder with hot water releases intense chocolate flavor.</li>
+            <li>Whipped eggs and sugar create a light, airy texture.</li>
+            <li>Ganache or frosting adds a professional touch.</li>
+          </ul>
+
+          <h3>Step-by-Step Process</h3>
+          <p>The baking process may sound intimidating, but it’s actually very simple when broken into small steps. By following these instructions carefully, you will not only avoid common mistakes but also develop confidence in your baking skills. Preparing the pans properly, measuring the ingredients with precision, and mixing in the correct order are the secrets that transform a regular chocolate cake into a masterpiece.</p>
+          <ol>
+            <li>Preheat your oven and line the baking pans with parchment paper.</li>
+            <li>Sift the flour, cocoa powder, baking soda, and salt for a smooth mixture.</li>
+            <li>In a separate bowl, whisk the eggs, sugar, and oil until the mixture becomes pale and fluffy.</li>
+            <li>Gradually fold in the dry ingredients while alternating with milk or water.</li>
+            <li>Pour the batter into the pans and bake until a toothpick comes out clean.</li>
+            <li>Allow the cake to cool completely before frosting or layering.</li>
+          </ol>
+
+          <h3>Final Thoughts</h3>
+          <p>At its core, baking is about love and patience, and a chocolate cake is the perfect example of this philosophy. Whether you are making it for a birthday celebration, a family gathering, or simply to satisfy a sweet craving, the joy of slicing into a soft, rich cake is unmatched. The best part is that this recipe is flexible—you can customize it with fresh fruits, nuts, or even flavored syrups to make it uniquely your own. Once you’ve mastered the basics, you’ll realize that a homemade cake isn’t just about taste—it’s also about creating memories that last forever.</p>
+          <!-- blog text end -->
+      </div>
+    </main>
+    <!-- blog grid end -->
+
+    <!-- Footer start -->
+    <footer class="dark:bg-dark bg-light px-20 md:px-40 w-full mx-auto mt-100">
+      <div class="max-w-1400 mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 pt-40 pb-10 gap-20 flex flex-col">
+        <div class="flex flex-col justify-center gap-10">
+          <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-20 hidden dark:block w-max">
+          <img src="./assets/images/logo-light.png" alt="light logo" class="h-20 dark:hidden w-max">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ad.</p>
+          <div class="social flex gap-10">
+            <!-- social media 1 -->
+            <a href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <!-- social media 2 -->
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <!-- social media 3 -->
+            <a href="#">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <!-- social media 4 -->
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <!-- social media 5 -->
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-3xl mb-5 font-bold">Quick Links</h4>
+          <ul class="flex flex-col gap-5">
+            <li class="text-lg opacity-80 hover:opacity-100 transition-all">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="text-lg opacity-80 hover:opacity-100 transition-all">
+              <a href="./menu.html">Menu</a>
+            </li>
+            <li class="text-lg opacity-80 hover:opacity-100 transition-all">
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li class="text-lg opacity-80 hover:opacity-100 transition-all">
+              <a href="./about.html">About</a>
+            </li>
+            <li class="text-lg opacity-80 hover:opacity-100 transition-all">
+              <a href="./gallery.html">Gallery</a>
+            </li>
+            <li class="text-lg opacity-80 hover:opacity-100 transition-all">
+              <a href="./book-a-table.html">Book a table</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-3xl mb-5 font-bold">Contact</h4>
+          <ul class="flex flex-col gap-10">
+            <li class="flex gap-5 items-center">
+              <svg class="h-35 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg>
+              <p>Main Street, Melbourne, Australia</p>
+            </li>
+            <li class="flex gap-5 items-center">
+              <svg class="h-35 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z"/></svg>
+              <p>+ (123) 456-789</p>
+            </li>
+            <li class="flex gap-5 items-center">
+              <svg class="h-35 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
+              <p>info@domainname.com</p>
+            </li>
+            <li class="flex gap-5 items-center">
+              <svg class="h-35 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/></svg>
+              <p>Saturday - Sunday 09:00 AM - 11:00 PM</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-sm pb-20">
+        &copy; <span id="currentYear"></span> CodeOVIK. All Rights Reserved.
+      </p>
+    </footer>
+    <!-- Footer end -->
+    
+    <!-- smooth scroll -->
+    <script src="./assets/js/lenis.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="./assets/js/scrollreveal.js"></script>
+    <!-- odometer for count up animation -->
+    <script src="./assets/js/odometer.min.js"></script>
+    <!-- gsap spilt text for text animation -->
+    <script src="./assets/js/SplitText.min.js"></script>
+    <!-- gsap scroll trigger -->
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <!-- gsap -->
+    <script src="./assets/js/gsap.min.js"></script>
+    <!-- swiperjs for customers review -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- main script -->
+    <script defer src="./assets/js/script.js"></script>
+
+  </body>
+</html>

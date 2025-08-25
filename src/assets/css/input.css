@@ -1,0 +1,252 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* fonts */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/semi-bold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/extra-bold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+/* css varriable */
+:root {
+  --primary-color: #ff0055;
+}
+
+/* tailwind config */
+@theme {
+  --color-primary: var(--primary-color);
+  --spacing: 1px;
+  --default-transition-duration: 0.3s;
+  --color-dark: #151515;
+  --color-light: #eeeeee;
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+/* button ui */
+.btn-primary {
+  @apply flex relative w-max font-bold items-center cursor-pointer gap-5 md:gap-10 bg-primary md:text-lg text-xs md:py-15 py-10 md:px-30 px-15 rounded-full text-white;
+  span:nth-child(3) {
+    clip-path: shape(from 76.09% 56.25%,hline to 0%,vline by -12.5%,hline by 76.09%,line to 41.09% 8.75%,line by 8.91% -8.75%,line by 50% 50%,line by -50% 50%,line by -8.91% -8.75%,line by 35% -35%,close);
+    @apply flex bg-white aspect-1/1 md:h-16 h-10 transform translate-x-0 opacity-100 transition-all ease-out;
+  }
+  span:nth-child(1) {
+    clip-path: shape(from 76.09% 56.25%,hline to 0%,vline by -12.5%,hline by 76.09%,line to 41.09% 8.75%,line by 8.91% -8.75%,line by 50% 50%,line by -50% 50%,line by -8.91% -8.75%,line by 35% -35%,close);
+    @apply bg-white absolute aspect-1/1 md:h-16 h-10 transform opacity-0 -translate-x-16 transition-all ease-out;
+  }
+  span:nth-child(2) {
+    @apply transform translate-x-0 transition-all ease-out;
+  }
+  &:hover > span:nth-child(3) {
+    @apply transform translate-x-16 opacity-0;
+  }
+  &:hover > span:nth-child(1) {
+    @apply -translate-x-0 opacity-100 delay-200;
+  }
+  &:hover > span:nth-child(2) {
+    @apply transform translate-x-26 delay-100;
+  }
+}
+.btn-secondary {
+  @apply flex relative w-max font-bold items-center cursor-pointer gap-5 md:gap-10 border-2 md:border-3 border-primary md:text-lg text-xs md:py-15 py-10 md:px-30 px-15 rounded-full;
+  span:nth-child(3) {
+    clip-path: shape(from 76.09% 56.25%,hline to 0%,vline by -12.5%,hline by 76.09%,line to 41.09% 8.75%,line by 8.91% -8.75%,line by 50% 50%,line by -50% 50%,line by -8.91% -8.75%,line by 35% -35%,close);
+    @apply flex bg-black dark:bg-white aspect-1/1 md:h-16 h-10 transform translate-x-0 opacity-100 transition-all ease-out;
+  }
+  span:nth-child(1) {
+    clip-path: shape(from 76.09% 56.25%,hline to 0%,vline by -12.5%,hline by 76.09%,line to 41.09% 8.75%,line by 8.91% -8.75%,line by 50% 50%,line by -50% 50%,line by -8.91% -8.75%,line by 35% -35%,close);
+    @apply bg-black dark:bg-white absolute aspect-1/1 md:h-16 h-10 transform opacity-0 -translate-x-16 transition-all ease-out;
+  }
+  span:nth-child(2) {
+    @apply transform translate-x-0 transition-all dark:text-white text-black ease-out;
+  }
+  &:hover > span:nth-child(3) {
+    @apply transform translate-x-16 opacity-0;
+  }
+  &:hover > span:nth-child(1) {
+    @apply -translate-x-0 opacity-100 delay-200;
+  }
+  &:hover > span:nth-child(2) {
+    @apply transform translate-x-26 delay-100;
+  }
+}
+
+/* menu item */
+#menu {
+  div {
+    @apply absolute md:p-20 p-10 rounded-2xl md:rounded-3xl font-bold w-[calc(100%-20px)] bottom-10 left-10 bg-white/30 hover:bg-white/50 dark:bg-black/30 dark:hover:bg-black/50 transition-all backdrop-blur-2xl dark:text-white;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  p {
+    @apply flex justify-between mt-10 text-sm md:text-base;
+  }
+  article {
+    @apply relative rounded-2xl md:rounded-3xl overflow-hidden;
+  }
+  img {
+    @apply transition-all ease-out aspect-square w-full;
+  }
+  article:hover {
+    img {
+      @apply scale-110;
+    }
+    /* div {
+      @apply scale-98;
+    } */
+  }
+  /* div:hover {
+    scale: 1 !important;
+  } */
+}
+
+/* customer review */
+.swiper {
+  @apply w-full h-max px-50;
+}
+.swiper-slide {
+  @apply lg:rounded-3xl rounded-2xl dark:bg-dark bg-light transition-all p-20 lg:p-40 border-white/15 border-2 lg:border-2;
+  img {
+    @apply rounded-full lg:h-100 md:h-80 h-60;
+  }
+  h5 {
+    @apply font-bold text-base md:text-2xl lg:text-4xl;
+  }
+  p {
+    @apply col-span-2 text-sm md:text-lg mt-15;
+  }
+  div {
+    @apply flex gap-15 items-center;
+  }
+}
+.swiper-slide-active {
+  @apply border-primary/50 transition-all;
+}
+
+
+/* blog item */
+#blog {
+  article {
+    @apply rounded-2xl md:rounded-3xl;
+    div:nth-child(1) {
+      @apply overflow-hidden rounded-2xl md:rounded-3xl;
+    }
+    div:nth-child(1):hover img {
+      @apply scale-110;
+    }
+  }
+  img {
+    @apply transition-all cursor-pointer;
+  }
+  h6 a {
+    display: inline;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    transition: background-size 0.6s ease;
+    @apply text-xl cursor-pointer;
+  }
+  h6:hover a {
+    background-size: 100% 1px;
+  }
+  h6 {
+    @apply md:px-20 px-10 pt-2 md:pt-10 mx-auto;
+  }
+}
+
+/* social */
+.social a {
+  @apply aspect-square p-10 h-35 md:h-50 bg-black/15 dark:bg-white/5 rounded-full transition-all relative;
+  i {
+    @apply transition-all md:text-xl text-sm absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+}
+.social a:hover {
+  @apply bg-primary;
+  i {
+    @apply text-white;
+  }
+}
+
+/* odometer animation duration control */
+.odometer.odometer-auto-theme .odometer-ribbon-inner, .odometer.odometer-theme-default .odometer-ribbon-inner {
+  transition-duration: 3s !important;
+}
+
+#stats article {
+  @apply relative flex flex-col items-center justify-center py-60;
+  h5 {
+    @apply relative z-10 text-4xl;
+  }
+  p:nth-child(1) {
+    @apply relative z-10 text-7xl font-bold;
+  }
+  p:nth-child(2) {
+    @apply relative z-10 text-lg;
+  }
+  img {
+    @apply absolute inset-0 h-2/3 rounded-3xl object-cover opacity-0 pointer-events-none -z-1 aspect-square;
+  }
+}
+
+#chef article {
+  @apply rounded-t-full rounded-b-2xl md:rounded-b-3xl overflow-hidden bg-light dark:bg-dark p-20;
+  p {
+    @apply text-primary;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+}
+
+#gallery-page {
+  img {
+    @apply mb-20 rounded-2xl md:rounded-3xl w-full;
+  }
+}
+
+#blog-details {
+  h3 {
+    @apply text-2xl md:text-3xl font-bold mt-15 mb-5;
+  }
+  p {
+    @apply md:text-lg text-xs mb-20;
+  }
+  ul {
+    @apply list-disc list-inside;
+  }
+  ol {
+    @apply list-decimal list-inside;
+  }
+}
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0; /* hide default icon */
+    display: none; /* ensure hidden */
+    -webkit-appearance: none;
+  }
