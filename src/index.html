@@ -404,13 +404,34 @@
       <div id="contact" class="lg:grid grid-cols-[5fr_3fr] md:gap-40 flex flex-col gap-15">
         <!-- form -->
         <form action="https://script.google.com/macros/s/AKfycbyoDsK4tHSxwO_LR-d-SPKrOTesGycPk7qNJTTO2NTWW46Ev5vUyVOGzgvxVGkhbh4PDQ/exec" method="post" class="dark:bg-dark bg-light child bg-lightbox md:p-40 p-20 rounded-2xl md:rounded-3xl md:grid flex flex-col md:grid-cols-2 gap-20 dark:[box-shadow:inset_0_0_30px_rgb(40,40,40)] [box-shadow:inset_0_0_30px_rgb(190,190,190)] child">
-          <input name="name" type="text" placeholder="Your name" class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-          <input name="email" type="email" placeholder="Your email" class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-          <input name="phone" type="number" placeholder="Your phone" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-          <input name="date" type="date" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-          <input name="time" type="time" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-          <input name="guests" type="number" placeholder="Number of guests" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-          <textarea name="message" placeholder="Special request" class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all"></textarea>
+          <div class="flex flex-col">
+            <label for="name">Your Name:</label>
+            <input required id="name" name="name" type="text" placeholder="example: Jhon Doe" class="placeholder-opacity-50 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="email">Your Email:</label>
+            <input required id="email" name="email" type="email" placeholder="example: you@email.com" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="phone">Your Phone:</label>
+            <input required id="phone" name="phone" type="number" placeholder="example: +0123456789" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="date">Select a date:</label>
+            <input required id="date" name="date" type="date" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="time">Select a time:</label>
+            <input id="time" required name="time" type="time" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div>
+            <label for="guests">Enter your guests:</label>
+            <input id="guests" required name="guests" type="number" placeholder="example: 13" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg w-full focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col col-span-2">
+            <label for="guests">Your message(optional):</label>
+            <textarea id="message" name="message" placeholder="example: I have a question about pricing..." class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all"></textarea>
+          </div>
           <button class="btn-primary w-max"><span></span><span>Book Now</span><span></span></button>
         </form>
         <!-- contact: address -->
@@ -426,12 +447,14 @@
             <p>Phone</p>
           </div>
           <p class="text-sm md:text-base">+ (123) 456-789</p>
+          <p class="text-sm md:text-base">+ 0123456789</p>
           <!-- contact: email -->
           <div class="text-xl md:text-3xl flex gap-5 items-center mt-10 md:mt-20">
             <svg class="h-30 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
             <p>Email</p>
           </div>
           <p class="text-sm md:text-base">info@domainname.com</p>
+          <p class="text-sm md:text-base">support@email.com</p>
           <!-- contact: time -->
           <div class="text-xl md:text-3xl flex gap-5 items-center mt-10 md:mt-20">
             <svg class="h-30 aspect-square fill-black dark:fill-white dark:bg-white/5 bg-black/5 rounded-full p-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/></svg>

@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 1px;
@@ -285,6 +287,9 @@
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
+  .col-span-3 {
+    grid-column: span 3 / span 3;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -357,9 +362,6 @@
   .table {
     display: table;
   }
-  .aspect-1\/1 {
-    aspect-ratio: 1/1;
-  }
   .aspect-3\/4 {
     aspect-ratio: 3/4;
   }
@@ -425,9 +427,6 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-40 {
-    width: calc(var(--spacing) * 40);
   }
   .w-300 {
     width: calc(var(--spacing) * 300);
@@ -584,20 +583,11 @@
       background-color: color-mix(in oklab, var(--color-black) 5%, transparent);
     }
   }
-  .bg-black\/30 {
-    background-color: color-mix(in srgb, #000 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
-    }
-  }
   .bg-black\/80 {
     background-color: color-mix(in srgb, #000 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-black) 80%, transparent);
     }
-  }
-  .bg-dark {
-    background-color: var(--color-dark);
   }
   .bg-light {
     background-color: var(--color-light);
@@ -743,6 +733,16 @@
   .underline {
     text-decoration-line: underline;
   }
+  .placeholder-gray-500 {
+    &::placeholder {
+      color: var(--color-gray-500);
+    }
+  }
+  .placeholder-red-500 {
+    &::placeholder {
+      color: var(--color-red-500);
+    }
+  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -834,18 +834,6 @@
       background-image: url('../images/banner-blog-page.jpg');
     }
   }
-  .before\:bg-\[url\(\'\.\.\/images\/banner-galle\.jpg\'\)\] {
-    &::before {
-      content: var(--tw-content);
-      background-image: url('../images/banner-galle.jpg');
-    }
-  }
-  .before\:bg-\[url\(\'\.\.\/images\/banner-gallery-pa\.jpg\'\)\] {
-    &::before {
-      content: var(--tw-content);
-      background-image: url('../images/banner-gallery-pa.jpg');
-    }
-  }
   .before\:bg-\[url\(\'\.\.\/images\/banner-gallery-page\.jpg\'\)\] {
     &::before {
       content: var(--tw-content);
@@ -870,34 +858,10 @@
       background-image: url('../images/sub-page-header-blog-details.jpg');
     }
   }
-  .before\:bg-\[url\(\'\.\.\/images\/sub-page-header-blog\.jpg\'\)\] {
-    &::before {
-      content: var(--tw-content);
-      background-image: url('../images/sub-page-header-blog.jpg');
-    }
-  }
   .before\:bg-\[url\(\'\.\.\/images\/sub-page-header-book-table\.jpg\'\)\] {
     &::before {
       content: var(--tw-content);
       background-image: url('../images/sub-page-header-book-table.jpg');
-    }
-  }
-  .before\:bg-\[url\(\'\.\.\/images\/sub-page-header-gallery\.jpg\'\)\] {
-    &::before {
-      content: var(--tw-content);
-      background-image: url('../images/sub-page-header-gallery.jpg');
-    }
-  }
-  .before\:bg-\[url\(\'\.\.\/images\/sub-page-header-menu\.jpg\'\)\] {
-    &::before {
-      content: var(--tw-content);
-      background-image: url('../images/sub-page-header-menu.jpg');
-    }
-  }
-  .before\:bg-\[url\(\'\.\.\/images\/sub-pmenuage-header-\.jpg\'\)\] {
-    &::before {
-      content: var(--tw-content);
-      background-image: url('../images/sub-pmenuage-header-.jpg');
     }
   }
   .before\:bg-cover {
@@ -1094,19 +1058,9 @@
       aspect-ratio: auto;
     }
   }
-  .md\:h-2 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 2);
-    }
-  }
   .md\:h-8 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 8);
-    }
-  }
-  .md\:h-20 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 20);
     }
   }
   .md\:h-40 {
@@ -2059,11 +2013,6 @@ body {
     list-style-position: inside;
     list-style-type: decimal;
   }
-}
-input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  display: none;
-  -webkit-appearance: none;
 }
 @property --tw-translate-x {
   syntax: "*";

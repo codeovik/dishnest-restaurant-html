@@ -244,9 +244,10 @@ body {
     @apply list-decimal list-inside;
   }
 }
-  input[type="date"]::-webkit-calendar-picker-indicator,
-  input[type="time"]::-webkit-calendar-picker-indicator {
-    opacity: 0; /* hide default icon */
-    display: none; /* ensure hidden */
-    -webkit-appearance: none;
-  }
+
+/* input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+  -webkit-appearance: none;
+} */
