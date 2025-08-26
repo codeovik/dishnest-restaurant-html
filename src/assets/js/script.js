@@ -376,6 +376,17 @@ document.fonts.ready.then(() => {
       once: false
     });
   }
+  // gallery
+  if (document.querySelector("#gallery")) {
+    ScrollReveal().reveal('#gallery img', {
+      interval: 300,
+      origin: 'bottom',
+      distance: '100px',
+      duration: 1000,
+      reset: false,
+      once: false
+    });
+  }
   // gallery page
   if (document.querySelector("#gallery-page")) {
     ScrollReveal().reveal('#gallery-page img', {
