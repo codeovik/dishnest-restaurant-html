@@ -42,13 +42,13 @@
     <!-- Navbar start -->
     <nav class="px-40 py-15 z-10 flex justify-between w-full items-center absolute top-0 left-0">
       <!-- logo -->
-      <a href="./blog-details.html" class="blog-link-in-image">
+      <a href="./index.html" class="">
         <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-40 hidden dark:block">
         <img src="./assets/images/logo-light.png" alt="light logo" class="h-40 dark:hidden">
       </a>
       <!-- Menubar in up to 1024px width devices -->
-      <div class="gap-30 items-center hidden lg:flex">
-        <ul class="flex gap-20">
+      <div class="gap-10 lg:gap-30 items-center flex">
+        <ul class="gap-20 hidden lg:flex">
           <li>
             <a href="./index.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
           </li>
@@ -69,31 +69,26 @@
           </li>
         </ul>
         <!-- dark and light svg -->
-        <button id="darkToggle" class="aspect-square rounded-full cursor-pointer bg-black/30 p-10">
-          <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-            <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/>
-          </svg>
-          <svg class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-            <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path>
-          </svg>
+        <button id="darkToggle" class="aspect-square rounded-full cursor-pointer bg-light dark:bg-dark p-10 h-40 flex items-center justify-center">
+          <svg class="fill-white aspect-square hidden w-full dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
+          <svg class="dark:hidden fill-black aspect-square w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
+        </button>
+        <!-- menu open button for mobile and tablet -->
+        <button id="openMenu" class="lg:hidden bg-primary h-40 aspect-square relative rounded-full">
+          <span class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
+          <span class="absolute top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
+          <span class="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
         </button>
       </div>
-      <!-- Menubar in less than 1024px width devices -->
-      <!-- menu open button -->
-      <button id="openMenu" class="lg:hidden bg-primary h-40 aspect-square relative rounded-full">
-        <span class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
-        <span class="absolute top-1/2 left-[55%] transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
-        <span class="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-1/2 rounded-full bg-white"></span>
-      </button>
       <!-- menu container. It will opacity:50% when click to menu -->
       <div id="menuBg" class="fixed top-0 left-0 h-dvh w-full z-11 bg-black/80 pointer-events-none opacity-0 transition-all"></div>
       <!-- menu content -->
-      <div id="menuContainer" class="bg-dark p-20 text-2xl z-12 h-dvh max-[300px]:w-[90%] w-300 top-0 -left-full fixed overflow-y-auto">
+      <div id="menuContainer" class="bg-light dark:bg-dark p-20 text-2xl z-12 h-dvh max-[300px]:w-[90%] w-300 top-0 -left-full fixed overflow-y-auto">
         <div class="flex justify-between items-center">
           <!-- logo in menu container -->
           <a href="./blog-details.html" class="blog-link-in-image">
-            <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-20 hidden dark:block">
-            <img src="./assets/images/logo-light.png" alt="light logo" class="h-20 dark:hidden">
+            <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-30 md:h-40 hidden dark:block">
+            <img src="./assets/images/logo-light.png" alt="light logo" class="h-30 md:h-40 dark:hidden">
           </a>
           <!-- close menu -->
           <button id="closeMenuFromButton" class="bg-primary rounded-full h-40 aspect-square flex justify-center items-center">
@@ -103,7 +98,7 @@
         <!-- menu links -->
         <ul class="mt-20 flex flex-col">
           <li>
-            <a href="./index.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
+            <a href="./index.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Home</a>
           </li>
           <li>
             <a href="./menu.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Menu</a>
@@ -115,7 +110,7 @@
             <a href="./about.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">About Us</a>
           </li>
           <li>
-            <a href="./gallery.html" class="text-base font-bold text-primary after:h-2 after:w-full after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Gallery</a>
+            <a href="./gallery.html" class="text-lg text-primary after:h-2 after:w-full after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Gallery</a>
           </li>
           <li>
             <a href="./book-a-table.html" class="text-lg dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Book table</a>
@@ -146,7 +141,7 @@
     <!-- Navbar end -->
 
     <!-- Hero section start -->
-    <header class="relative w-full h-350 before:absolute before:inset-0 bg-white dark:bg-black before:bg-[url('../images/sub-page-header-gallery.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-30">
+    <header class="relative w-full h-350 before:absolute before:inset-0 bg-white dark:bg-black before:bg-[url('../images/banner-gallery-page.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-30">
       <div class="text-white flex flex-col gap-20 items-center justify-center h-full relative">
         <h1 class="text-5xl font-bold text-black dark:text-white">Our Gallery</h1>
         <p class="flex items-center text-lg text-black dark:text-white">
