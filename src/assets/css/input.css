@@ -28,18 +28,13 @@
   font-weight: 800;
 }
 
-/* css varriable */
-:root {
-  --primary-color: #ff0055;
-}
-
 /* tailwind config */
 @theme {
   --color-primary: var(--primary-color);
   --spacing: 1px;
-  --default-transition-duration: 0.3s;
-  --color-dark: #151515;
-  --color-light: #eeeeee;
+  --default-transition-duration: var(--transition-time);
+  --color-dark: var(--dark-color);
+  --color-light: var(--light-color);
 }
 
 body {

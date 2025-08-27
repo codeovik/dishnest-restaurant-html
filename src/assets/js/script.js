@@ -65,10 +65,10 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     // nav in more than 200px scroll down
     nav.classList.remove("absolute");
-    nav.classList.add("fixed", "dark:bg-black/80", "backdrop-blur-xl");
+    nav.classList.add("fixed", "dark:bg-black/80", "bg-white/60", "backdrop-blur-xl");
   } else {
     // nav in top
-    nav.classList.remove("fixed", "dark:bg-black/80", "backdrop-blur-xl");
+    nav.classList.remove("fixed", "dark:bg-black/80", "bg-white/60", "backdrop-blur-xl");
     nav.classList.add("absolute");
   }
 });

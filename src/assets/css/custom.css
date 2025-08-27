@@ -1,0 +1,7 @@
+/* css varriable */
+:root {
+  --primary-color: #ff0055;
+  --dark-color: #151515;
+  --light-color: #eeeeee;
+  --transition-time: 0.5s;
+}
