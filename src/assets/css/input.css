@@ -215,12 +215,15 @@ body {
 }
 
 #chef article {
-  @apply rounded-t-full rounded-b-2xl md:rounded-b-3xl overflow-hidden bg-light dark:bg-dark p-20;
+  @apply rounded-2xl md:rounded-3xl overflow-hidden bg-light dark:bg-dark p-20;
   p {
     @apply text-primary;
   }
   h4 {
-    @apply text-2xl;
+    @apply text-2xl mb-10;
+  }
+  img {
+    @apply aspect-square object-cover rounded-2xl md:rounded-3xl;
   }
 }
 

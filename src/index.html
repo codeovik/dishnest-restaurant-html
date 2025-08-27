@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
     <!-- odometer for count up animation -->
     <link rel="stylesheet" href="./assets/css/odometer-theme-default.min.css">
-    <!-- fontasome -->
+    <!-- fontawsome -->
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <!-- main stylesheet(tailwind css) -->
     <link rel="stylesheet" href="./assets/css/output.css">
@@ -68,10 +68,10 @@
             <a href="./book-a-table.html" class="text-base font-bold dark:text-white after:h-2 after:w-0 after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Book table</a>
           </li>
         </ul>
-        <!-- dark and light svg -->
+        <!-- dark and light theme toggle -->
         <button id="darkToggle" class="aspect-square rounded-full cursor-pointer bg-light dark:bg-dark p-10 h-40 flex items-center justify-center">
-          <svg class="fill-white aspect-square hidden w-full dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
-          <svg class="dark:hidden fill-black aspect-square w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
+          <svg class="fill-white -rotate-35 aspect-square hidden w-full dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
+          <svg class="dark:hidden fill-black aspect-square w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
         </button>
         <!-- menu open button for mobile and tablet -->
         <button id="openMenu" class="lg:hidden bg-primary h-40 aspect-square relative rounded-full">
@@ -378,11 +378,11 @@
       </div>
       <!-- images -->
       <div id="gallery" class="grid md:grid-cols-12 md:grid-rows-8 md:gap-10 gap-20">
-        <img src="./assets/images/gallery-1.jpg" alt="" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-5/5 md:col-span-5 md:row-span-5">
-        <img src="./assets/images/gallery-2.jpg" alt="" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-4/4 md:col-span-4 md:row-span-4">
-        <img src="./assets/images/gallery-3.jpg" alt="" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-3/4 md:col-span-3 md:row-span-4">
-        <img src="./assets/images/gallery-4.jpg" alt="" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-7/4 md:col-span-7 md:row-span-4">
-        <img src="./assets/images/gallery-5.jpg" alt="" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-5/3 md:col-span-5 md:row-span-3">
+        <img src="./assets/images/gallery-1.jpg" alt="chair and table" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-5/5 md:col-span-5 md:row-span-5">
+        <img src="./assets/images/gallery-2.jpg" alt="dishes" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-4/4 md:col-span-4 md:row-span-4">
+        <img src="./assets/images/gallery-3.jpg" alt="table in outdoor" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-3/4 md:col-span-3 md:row-span-4">
+        <img src="./assets/images/gallery-4.jpg" alt="table with people" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-7/4 md:col-span-7 md:row-span-4">
+        <img src="./assets/images/gallery-5.jpg" alt="chefs" class="object-cover rounded-2xl md:rounded-3xl w-full aspect-5/3 md:col-span-5 md:row-span-3">
       </div>
       <a href="./gallery.html" class="btn-secondary w-max mx-auto my-10"><span></span><span>See All Moments</span><span></span></a>
     </section>
@@ -403,7 +403,7 @@
       </div>
       <div id="contact" class="lg:grid grid-cols-[5fr_3fr] md:gap-40 flex flex-col gap-15">
         <!-- form -->
-        <form action="https://script.google.com/macros/s/AKfycbyoDsK4tHSxwO_LR-d-SPKrOTesGycPk7qNJTTO2NTWW46Ev5vUyVOGzgvxVGkhbh4PDQ/exec" method="post" class="dark:bg-dark bg-light child bg-lightbox md:p-40 p-20 rounded-2xl md:rounded-3xl md:grid flex flex-col md:grid-cols-2 gap-20 dark:[box-shadow:inset_0_0_30px_rgb(40,40,40)] [box-shadow:inset_0_0_30px_rgb(190,190,190)] child">
+        <form action="https://script.google.com" method="post" class="dark:bg-dark bg-light child bg-lightbox md:p-40 p-20 rounded-2xl md:rounded-3xl md:grid flex flex-col md:grid-cols-2 gap-20 dark:[box-shadow:inset_0_0_30px_rgb(40,40,40)] [box-shadow:inset_0_0_30px_rgb(190,190,190)] child">
           <div class="flex flex-col">
             <label for="name">Your Name:</label>
             <input required id="name" name="name" type="text" placeholder="example: Jhon Doe" class="placeholder-opacity-50 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
@@ -418,11 +418,11 @@
           </div>
           <div class="flex flex-col">
             <label for="date">Select a date:</label>
-            <input required id="date" name="date" type="date" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+            <input required id="date" name="date" type="date" class="md:outline-2 w-full outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
           </div>
           <div class="flex flex-col">
             <label for="time">Select a time:</label>
-            <input id="time" required name="time" type="time" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+            <input id="time" required name="time" type="time" class="md:outline-2 w-full outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
           </div>
           <div>
             <label for="guests">Enter your guests:</label>
@@ -492,8 +492,8 @@
     
     <!-- Customer Reviews section start -->
     <section class="pt-100 text-black dark:text-white max-w-[1400px] overflow-hidden mx-auto md:grid grid-cols-2 px-20 lg:px-40">
-      <div>
-        <h2 id="review-title" class="font-bold text-xl lg:text-7xl md:text-5xl text-center md:text-left mb-10 md:mb-0  overflow-hidden">
+      <div class="flex items-center">
+        <h2 id="review-title" class="font-bold text-xl lg:text-7xl md:text-5xl text-center md:text-left mb-10 md:mb-0 overflow-hidden">
           Serving Happiness One Plate at a Time
         </h2>
       </div>
@@ -502,7 +502,7 @@
           <!-- review 1 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-1.jpg" alt="">
+              <img src="./assets/images/customer-oliver.jpg" alt="Oliver Smith">
               <h5>Oliver Smith</h5>
             </div>
             <p>Absolutely amazing template! The design is clean, responsive, and super easy to customize. It saved me so much time and my clients are loving the modern look. Highly recommended for any project.</p>
@@ -510,7 +510,7 @@
           <!-- review 2 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-2.jpg" alt="">
+              <img src="./assets/images/customer-emma.jpg" alt="Emma Johnson">
               <h5>Emma Johnson</h5>
             </div>
             <p>This template exceeded my expectations. Every section is thoughtfully designed, and the code is very well structured. I was able to launch my site quickly without any issues. Excellent work!</p>
@@ -518,7 +518,7 @@
           <!-- review 3 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-3.jpg" alt="">
+              <img src="./assets/images/customer-lima.jpg" alt="Liam Brown">
               <h5>Liam Brown</h5>
             </div>
             <p>Very professional design and smooth animations. Everything works perfectly across devices. The documentation is clear, and the support team responded instantly to my questions. Definitely worth the purchase.</p>
@@ -526,7 +526,7 @@
           <!-- review 4 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-4.jpg" alt="">
+              <img src="./assets/images/customer-sophia.jpg" alt="Sophia Davis">
               <h5>Sophia Davis</h5>
             </div>
             <p>I’m impressed with the flexibility of this template. It’s lightweight, SEO-friendly, and fully customizable. My website looks stunning and loads fast. A fantastic choice for developers and designers alike.</p>
@@ -534,7 +534,7 @@
           <!-- review 5 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-5.jpg" alt="">
+              <img src="./assets/images/customer-noah.jpg" alt="Noah Wilson">
               <h5>Noah Wilson</h5>
             </div>
             <p>Clean layout, modern design, and easy to edit. I managed to integrate my content seamlessly. The template is well-coded, responsive, and perfect for showcasing creative projects. Highly satisfied with this purchase.</p>
@@ -542,15 +542,15 @@
           <!-- review 6 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-6.jpg" alt="">
-              <h5>Isabella Martinez</h5>
+              <img src="./assets/images/customer-jhon.jpg" alt="Jhon Martinez">
+              <h5>Jhon Martinez</h5>
             </div>
             <p>This template is a lifesaver! Perfect for portfolios and agency sites. The components are reusable, the design is elegant, and the overall performance is top-notch. It really speeds up development time.</p>
           </div>
           <!-- review 7 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-7.jpg" alt="">
+              <img src="./assets/images/customer-lucas.jpg" alt="Lucas Anderson">
               <h5>Lucas Anderson</h5>
             </div>
             <p>Beautifully designed template with attention to every detail. I loved the color palette and typography. Responsive across all devices, and the animations make the site look very professional. Highly recommended!</p>
@@ -558,7 +558,7 @@
           <!-- review 8 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-8.jpg" alt="">
+              <img src="./assets/images/customer-mia.jpg" alt="Mia Thomas">
               <h5>Mia Thomas</h5>
             </div>
             <p>Extremely easy to work with and fully responsive. The template helped me deliver a stunning website in record time. The code is clean and well-commented, making customization a breeze.</p>
@@ -566,7 +566,7 @@
           <!-- review 9 -->
           <div class="swiper-slide">
             <div>
-              <img src="./assets/images/client-9.jpg" alt="">
+              <img src="./assets/images/customer-ethan.jpg" alt="Ethan Lee">
               <h5>Ethan Lee</h5>
             </div>
             <p>Fantastic template! The layout is flexible, user-friendly, and looks amazing on all devices. Smooth animations and great design make it perfect for clients who want modern, professional websites.</p>
@@ -634,8 +634,8 @@
     <footer class="dark:bg-dark bg-light px-20 md:px-40 w-full mx-auto mt-100">
       <div class="max-w-1400 mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 pt-40 pb-10 gap-20 flex flex-col">
         <div class="flex flex-col justify-center gap-10">
-          <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-20 hidden dark:block w-max">
-          <img src="./assets/images/logo-light.png" alt="light logo" class="h-20 dark:hidden w-max">
+          <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-30 md:h-40 hidden dark:block w-max">
+          <img src="./assets/images/logo-light.png" alt="light logo" class="h-30 md:h-40 dark:hidden w-max">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ad.</p>
           <div class="social flex gap-10">
             <!-- social media 1 -->

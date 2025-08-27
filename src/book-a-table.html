@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
     <!-- odometer for count up animation -->
     <link rel="stylesheet" href="./assets/css/odometer-theme-default.min.css">
-    <!-- fontasome -->
+    <!-- fontawsome -->
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <!-- main stylesheet(tailwind css) -->
     <link rel="stylesheet" href="./assets/css/output.css">
@@ -68,10 +68,10 @@
             <a href="./book-a-table.html" class="text-base font-bold text-primary after:h-2 after:w-full after:bg-primary after:rounded-full hover:after:w-full relative after:absolute after:bottom-0 after:left-0 after:transition-all">Book table</a>
           </li>
         </ul>
-        <!-- dark and light svg -->
+        <!-- dark and light theme toggle -->
         <button id="darkToggle" class="aspect-square rounded-full cursor-pointer bg-light dark:bg-dark p-10 h-40 flex items-center justify-center">
-          <svg class="fill-white aspect-square hidden w-full dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
-          <svg class="dark:hidden fill-black aspect-square w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
+          <svg class="fill-white -rotate-35 aspect-square hidden w-full dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"/></svg>
+          <svg class="dark:hidden fill-black aspect-square w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg>
         </button>
         <!-- menu open button for mobile and tablet -->
         <button id="openMenu" class="lg:hidden bg-primary h-40 aspect-square relative rounded-full">
@@ -155,17 +155,38 @@
 
     <!-- form and image start -->
     <div id="contact-page-form" class="lg:grid flex flex-col lg:grid-cols-[40%_60%] gap-20 px-20 lg:px-40 max-w-1400 mx-auto mt-50">
-      <img src="./assets/images/form.jpg" alt="fish" class="w-full rounded-2xl md:rounded-3xl h-full object-cover child">
-      <form action="https://script.google.com/macros/s/AKfycbyoDsK4tHSxwO_LR-d-SPKrOTesGycPk7qNJTTO2NTWW46Ev5vUyVOGzgvxVGkhbh4PDQ/exec" method="post" class="dark:bg-dark bg-light child bg-lightbox md:p-40 p-20 rounded-2xl md:rounded-3xl md:grid flex flex-col md:grid-cols-2 gap-20 dark:[box-shadow:inset_0_0_30px_rgb(40,40,40)] [box-shadow:inset_0_0_30px_rgb(190,190,190)] child">
-        <input name="name" type="text" placeholder="Your name" class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-        <input name="email" type="email" placeholder="Your email" class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-        <input name="phone" type="number" placeholder="Your phone" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-        <input name="date" type="date" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-        <input name="time" type="time" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-        <input name="guests" type="number" placeholder="Number of guests" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
-        <textarea name="message" placeholder="Special request" class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all"></textarea>
-        <button class="btn-primary w-max"><span></span><span>Book Now</span><span></span></button>
-      </form>
+      <img src="./assets/images/form-image.jpg" alt="cake" class="w-full rounded-2xl md:rounded-3xl h-full object-cover child">
+        <form action="https://script.google.com" method="post" class="dark:bg-dark bg-light child bg-lightbox md:p-40 p-20 rounded-2xl md:rounded-3xl md:grid flex flex-col md:grid-cols-2 gap-20 dark:[box-shadow:inset_0_0_30px_rgb(40,40,40)] [box-shadow:inset_0_0_30px_rgb(190,190,190)] child">
+          <div class="flex flex-col">
+            <label for="name">Your Name:</label>
+            <input required id="name" name="name" type="text" placeholder="example: Jhon Doe" class="placeholder-opacity-50 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="email">Your Email:</label>
+            <input required id="email" name="email" type="email" placeholder="example: you@email.com" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="phone">Your Phone:</label>
+            <input required id="phone" name="phone" type="number" placeholder="example: +0123456789" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="date">Select a date:</label>
+            <input required id="date" name="date" type="date" class="md:outline-2 w-full outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col">
+            <label for="time">Select a time:</label>
+            <input id="time" required name="time" type="time" class="md:outline-2 w-full outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all">
+          </div>
+          <div>
+            <label for="guests">Enter your guests:</label>
+            <input id="guests" required name="guests" type="number" placeholder="example: 13" class="md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg w-full focus:outline-primary transition-all">
+          </div>
+          <div class="flex flex-col col-span-2">
+            <label for="guests">Your message(optional):</label>
+            <textarea id="message" name="message" placeholder="example: I have a question about pricing..." class="col-span-2 md:outline-2 outline-2 outline-black/15 dark:outline-white/15 md:p-15 p-10 dark:text-white rounded-xl md:rounded-lg focus:outline-primary transition-all"></textarea>
+          </div>
+          <button class="btn-primary w-max"><span></span><span>Book Now</span><span></span></button>
+        </form>
     </div>
     <!-- form and image end -->
 
@@ -186,11 +207,13 @@
             <svg class="h-80 aspect-square fill-black dark:fill-primary dark:bg-primary/10 bg-primary/5 rounded-full p-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z"/></svg>
             <h4 class="text-4xl font-bold">Phone</h4>
             <p>+ (123) 456-789</p>
+            <p class="text-sm md:text-base">+ 0123456789</p>
           </li>
           <li class="flex gap-5 items-center bg-light dark:bg-dark rounded-3xl p-40 flex-col dark:[box-shadow:inset_0_0_30px_rgb(40,40,40)] [box-shadow:inset_0_0_30px_rgb(190,190,190)]">
             <svg class="h-80 aspect-square fill-black dark:fill-primary dark:bg-primary/10 bg-primary/5 rounded-full p-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
             <h4 class="text-4xl font-bold">Email</h4>
             <p>info@domainname.com</p>
+            <p class="text-sm md:text-base">support@email.com</p>
           </li>
         </ul>
     </section>
@@ -218,8 +241,8 @@
     <footer class="dark:bg-dark bg-light px-20 md:px-40 w-full mx-auto mt-100">
       <div class="max-w-1400 mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 pt-40 pb-10 gap-20 flex flex-col">
         <div class="flex flex-col justify-center gap-10">
-          <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-20 hidden dark:block w-max">
-          <img src="./assets/images/logo-light.png" alt="light logo" class="h-20 dark:hidden w-max">
+          <img src="./assets/images/logo-dark.png" alt="dark logo" class="h-30 md:h-40 hidden dark:block w-max">
+          <img src="./assets/images/logo-light.png" alt="light logo" class="h-30 md:h-40 dark:hidden w-max">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ad.</p>
           <div class="social flex gap-10">
             <!-- social media 1 -->
