@@ -1,7 +1,55 @@
-/* css varriable */
 :root {
+  /* brand color */
   --primary-color: #ff0055;
-  --dark-color: #151515;
-  --light-color: #eeeeee;
+
+  /* background color in light theme */
+  --light-theme-background: #f2f2f2;
+
+  /* background color in dark theme */
+  --dark-theme-background: #050505;
+
+  /* light theme box background color */
+  --light-theme-box-background: #eeeeee;
+
+  /* dark theme box background color */
+  --dark-theme-box-background: #151515;
+
+  /* transition duration */
   --transition-time: 0.5s;
+}
+
+/* import regular font */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/BricolageGrotesque_Condensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+/* import medium font */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/BricolageGrotesque_Condensed-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+/* import semi bold font */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/BricolageGrotesque_Condensed-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+/* import bold font */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/BricolageGrotesque_Condensed-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* import extra bold font */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/BricolageGrotesque_Condensed-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+/* apply font */
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
 }

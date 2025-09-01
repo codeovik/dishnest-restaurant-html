@@ -1,44 +1,15 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* fonts */
-@font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("../fonts/regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("../fonts/medium.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("../fonts/semi-bold.ttf") format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("../fonts/bold.ttf") format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("../fonts/extra-bold.ttf") format("truetype");
-  font-weight: 800;
-}
-
 /* tailwind config */
 @theme {
   --color-primary: var(--primary-color);
   --spacing: 1px;
   --default-transition-duration: var(--transition-time);
-  --color-dark: var(--dark-color);
-  --color-light: var(--light-color);
-}
-
-body {
-  font-family: "Bricolage Grotesque", sans-serif;
+  --color-dark: var(--dark-theme-box-background);
+  --color-light: var(--light-theme-box-background);
+  --color-dark-theme-background: var(--dark-theme-background);
+  --color-light-theme-background: var(--light-theme-background);
 }
 
 /* button ui */
