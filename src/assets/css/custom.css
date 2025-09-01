@@ -3,13 +3,13 @@
   --primary-color: #ff0055;
 
   /* background color in light theme */
-  --light-theme-background: #f2f2f2;
+  --light-theme-background: #ffffff;
 
   /* background color in dark theme */
   --dark-theme-background: #050505;
 
   /* light theme box background color */
-  --light-theme-box-background: #eeeeee;
+  --light-theme-box-background: #d4d4d4;
 
   /* dark theme box background color */
   --dark-theme-box-background: #151515;
